@@ -1,7 +1,7 @@
 # graphfractals: how it works, what worked, what did not
 
 Written from the code and from the output left on disk: 19,292 PNGs and 9,585 logs in `Images/` (from 2024-04-05), 28,016 low-resolution PNGs with
-10,146 logs in `lowres/unlabeled/`, and about 38,000 images sorted into 35 visual classes by the autoencoder of the
+10,146 logs in `lowres/unlabeled/`, and 31 class folders (Atypique, bacteroid, Dentelle, Floral, ...) holding a few dozen hand-sorted or autoencoder-sorted images each, used by the
 [FractalAutoencoder](https://github.com/Carlsans/FractalAutoencoder) project. Statements marked *(inferred)* are conclusions from that evidence.
 
 ## The idea
@@ -46,7 +46,7 @@ The grade is the size of the PNG of the escape-iteration image divided by the nu
 - **Raising the bar over time.** The ratchet (0.13 to 0.2) avoids both an empty first phase and a plateau of mediocre images.
 - **Tree mutation with pruning.** Trimming a branch and keeping the result only if the grade did not drop (`ispruning`) kept formulas from growing without limit.
 - **A formula pool.** Crossing with earlier winners reused good sub-expressions.
-- **Using the pictures to learn.** The images fed the autoencoder, which sorted them into classes (Atypique, bacteroid, Dentelle, Floral, Hyperboid, mandala, ...).
+- **Using the pictures to learn.** The low-resolution images fed a convolutional autoencoder with a classifier, trained on 31 named classes (Atypique, bacteroid, Dentelle, Floral, Hyperboid, mandala, ...).
 
 ## What did not work (or was left unfinished)
 
