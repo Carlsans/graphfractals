@@ -1,0 +1,15 @@
+# generated images and logs (tens of thousands of files, 34 GB)
+GraphFractals/Images/
+GraphFractals/lowres/
+GraphFractals/fractal.png
+GraphFractals/CustomFunctions/comparemeresized.jpg
+GraphFractals/syncbackup/
+*.npy
+# formula pools are pickles from earlier runs
+GraphFractals/EvolutiveFormula/pool/
+# environments and caches
+.venv/
+.idea/
+__pycache__/
+.stfolder/
+.stignore

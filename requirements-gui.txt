@@ -1,0 +1,10 @@
+numpy
+scipy
+matplotlib
+networkx
+sympy
+Pillow
+PySide6
+# optional
+# chime
+# dill
